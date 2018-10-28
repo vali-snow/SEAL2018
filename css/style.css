@@ -97,6 +97,21 @@ header nav{
     font-weight: bold;
 }
 
+/* logo allergy-page */
+
+#logo-allergy{
+    min-height: 100px;
+    background: url('../img/logo.jpg') no-repeat 0 -1050px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#logo-allergy h1{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
 /* search */
 #search {
     padding: 15px;
@@ -116,6 +131,29 @@ header nav{
 #search input[type="text"]{
     padding: 5px;
     height: 25px;
+    width: 250px;
+}
+
+/* search allergy-page */
+
+#search-allergy {
+    padding: 2px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#search-allergy h3 {
+    float: left;
+}
+
+#search-allergy form {
+    float: right;
+    margin-top: 12px;
+}
+
+#search-allergy input[type="text"]{
+    padding: 5px;
+    height: 20px;
     width: 250px;
 }
 
@@ -141,6 +179,64 @@ header nav{
     margin-bottom: 10px;
 }
 
+/* info-allergy */
+
+#allergy-title{
+    font-size:30px;
+    margin-top:20px;
+    margin-left:8px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#title-description{
+    
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}
+
+#reports {
+    color: #ff8000;
+    float: right;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#info {
+    margin-top: 20px;
+}
+#info-title {
+    color: #35424a;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+#info .box{
+    background: #d9d9d9;
+    float: left;
+    width: 97%;
+    padding: 10px;
+    text-align: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+   
+}
+
+#info p{
+    color: #000000;
+    text-decoration: none;
+    margin-left: 10px;
+}
 
 /* footer */
 footer{
