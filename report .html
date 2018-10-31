@@ -1,15 +1,17 @@
 <!DOCTYPE HTML>
-<html property="http://scholarly-html.org/schtml">
-
+<html lang="en" property="http://scholarly-html.org/schtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 	<title>Report</title>
+    <link rel="stylesheet" href="/css/report.css">
 </head>
-
 <body>
-
-    <article>
-        <h1>Report CLIW</h1>
+    <header>
+        <h1 id="title" class="w80p"><span class="highlight">SEASONAL</span> ALLERGY WEB NOTIFIER</h1>
+    </header>
+    <article class="w80p">
+        <h1>Project Report</h1>
         <div typeof="sa:AuthorsList" property="schema:ItemList">
             <h2>Authors</h2>
             <ul>
@@ -41,17 +43,31 @@
             </ul>
         </div>
         <section>
-            <h1>Report P</h1>
+            <h2>Report <span class="highlight">P</span></h2>
             <section>
-                <h2>General Design Concepts</h2>
+                <h3>General Design Concepts</h3>
+                <p>The page design can have a significant impact on the success of our communication, on it's usability and persuasiveness.</p>
+                <p>That is why we will try to focus on reader-centered pages, facilitating the understanding of information & the ability to find it with ease.</p>
             </section>
             <section>
-                <h2>User Interaction</h2>
+                <h3>User Interaction</h3>
+                <p>While using our application, the user will have the following features available:</p>
+                <ul>
+                    <li>Accept & Receive Notifications</li>
+                    <li>Search for allergies</li>
+                    <li>See details & stats for a specific allergy</li>
+                </ul>
+                
+                <p>Below is the interaction diagram:</p>
+                <figure typeof="sa:image">
+                    <img src="/img/report%20-%20UI%20Diagram.png" alt="User Interaction Diagram">
+                    <figcaption> <i>Fig. 1:</i> User Interaction Diagram</figcaption>
+                </figure>
             </section>
             <section>
-                <h2>Management</h2>
+                <h3>Management</h3>
                 <section>
-                    <h3>Source Code</h3>
+                    <h4>Source Code</h4>
                     <p>The tool we chose to use for code hosting is 
                         <span typeof="schema:WebSite">
                             <span property="schema:name">Github</span>
@@ -73,7 +89,7 @@
                     </ol>
                 </section>
                 <section>
-                    <h3>Team Coordination</h3>
+                    <h4>Team Coordination</h4>
                     <p>We have decided to use 
                         <span typeof="schema:WebSite">
                             <span property="schema:name">Trello</span>
@@ -100,22 +116,18 @@
                     <p>We improved it by integrating Trello & Github into it.</p>
                 </section>
             </section>
-            
         </section>
         <section>
-            <h1>Report A</h1>
+            <h2>Report <span class="highlight">A</span></h2>
             <p>So close, yet so far away ...</p>
         </section>
         <section>
-            <h1>Report S</h1>
+            <h2>Report <span class="highlight">S</span></h2>
             <p>So close, yet so far away ...</p>
         </section>
     </article>
-    
 	<footer>
-		<p>Copyright 2018 SEAL Team</p>
+		<p>Seasonal Allergy, Copyright <span class="highlight">&copy;</span> 2018.</p>
 	</footer>
-    
 </body>
-
 </html>
