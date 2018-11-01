@@ -1,20 +1,16 @@
 body{
-
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     background-color: #f4f4f4;
-
 }
 
 
 /* Global */
 .container{
-
     width: 80%;
     margin: auto;
     overflow: hidden;
-
 }
 
 .button_1{
@@ -76,7 +72,6 @@ header nav{
 }
 
 
-
 /* Logo */
 #logo{
     min-height: 400px;
@@ -104,6 +99,7 @@ header nav{
     background: url('../img/logo.jpg') no-repeat 0 -1050px;
     text-align: center;
     color: #ffffff;
+    border-bottom: #e8491d 3px solid;
 }
 
 #logo-allergy h1{
@@ -190,24 +186,34 @@ header nav{
 }
 
 #title-description{
-    
     color: #000000;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 10px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px; 
 }
 
 #reports {
-    color: #ff8000;
     float: right;
-    text-transform: uppercase;
     font-size: 16px;
     margin-right: 20px;
     margin-bottom: 20px;
+    font-weight: bold;
+    display: inline;
+}
+
+#reports a{
+    color: #ff8000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+
+#reports a:hover{
+    color:#35424a;
     font-weight: bold;
 }
 #info {
@@ -229,7 +235,6 @@ header nav{
     margin-right: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
-   
 }
 
 #info p{
