@@ -104,6 +104,7 @@ header nav{
     background: url('../img/logo.jpg') no-repeat 0 -1050px;
     text-align: center;
     color: #ffffff;
+    border-bottom: #e8491d 3px solid;
 }
 
 #logo-allergy h1{
@@ -202,12 +203,24 @@ header nav{
 }
 
 #reports {
-    color: #ff8000;
     float: right;
-    text-transform: uppercase;
     font-size: 16px;
     margin-right: 20px;
     margin-bottom: 20px;
+    font-weight: bold;
+    display: inline;
+}
+
+#reports a{
+    color: #ff8000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+
+#reports a:hover{
+    color:#35424a;
     font-weight: bold;
 }
 #info {
