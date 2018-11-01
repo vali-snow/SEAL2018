@@ -1,20 +1,16 @@
 body{
-
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     background-color: #f4f4f4;
-
 }
 
 
 /* Global */
 .container{
-
     width: 80%;
     margin: auto;
     overflow: hidden;
-
 }
 
 .button_1{
@@ -74,7 +70,6 @@ header nav{
     float: right;
     margin-top: 10px;
 }
-
 
 
 /* Logo */
@@ -191,15 +186,13 @@ header nav{
 }
 
 #title-description{
-    
     color: #000000;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 18px;
     margin-left: 10px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px; 
 }
 
 #reports {
@@ -242,7 +235,6 @@ header nav{
     margin-right: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
-   
 }
 
 #info p{
