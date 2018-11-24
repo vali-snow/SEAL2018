@@ -25,8 +25,8 @@ Router.prototype = {
     init: function () {
         'use strict';
         var r = this.routes;
-        (function (scope) {
-            window.addEventListener('hashchange', function (r) {
+        (function (scope, r) {
+            window.addEventListener('hashchange', function (ev) {
                 scope.hasChanged(scope, r);
             });
         }(this, r));
@@ -56,7 +56,7 @@ Router.prototype = {
         (function (scope) {
             var url = 'views/' + htmlName,
                 xhttp = new XMLHttpRequest();
-            xhttp.inreadystatechange = function () {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     scope.rootElem.innerHTML = this.responseText;
                 }
