@@ -1,0 +1,38 @@
+#logo{
+    height: 100px;
+}
+
+#logo h1{
+    padding: 30px 0px;
+    font-size: 30px;
+}
+
+#results {
+    padding: 15px 0px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#results > div {
+    background: #d3d3d3;
+    padding: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+#newsBox h2 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#results h2 a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+#results p {
+    text-align: justify;
+}
