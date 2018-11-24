@@ -45,7 +45,7 @@ Router.prototype = {
         } else {
             for (i = 0, length = r.length; i < length; i += 1) {
                 route = r[i];
-                if (route.defaultHtml) {
+                if (route.defaultRoute) {
                     scope.goToRoute(route.htmlName);
                 }
             }
