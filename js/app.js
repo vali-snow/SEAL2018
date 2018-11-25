@@ -1,4 +1,4 @@
-/*global Route, Router */
+/*global Route, Router*/
 
 
 (function () {

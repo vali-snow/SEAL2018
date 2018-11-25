@@ -1,5 +1,5 @@
-/*global console */
-/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+/*global console*/
+/*eslint no-console: ["error", { allow: ["warn", "error"] }]*/
 
 function Route(name, htmlName, defaultRoute) {
     'use strict';
