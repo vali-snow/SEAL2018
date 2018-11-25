@@ -10,120 +10,126 @@ function loadData(htmlName, parameter) {
     var db = restoreDBfromSSasJSON();
     
     switch (htmlName) {
-        case 'main.html':
-            let first6 = db.slice(0,6);
-            let newsBox = document.getElementById("newsBox");
-            for (let i in first6) {
-                let ta = document.createTextNode(first6[i].name);
-                let a = document.createElement("A");
-                a.setAttribute('href', '#allergy?'+first6[i].id);
-                a.appendChild(ta);
-                let h2 = document.createElement("H2");
-                h2.appendChild(a);
-                let tp = document.createTextNode(first6[i].description);
-                let p = document.createElement("P");
-                p.appendChild(tp);
-                let div = document.createElement("DIV");
-                div.appendChild(h2)
-                div.appendChild(p);
-                newsBox.appendChild(div);
-            }
-            break;
-        case 'results.html':
-            let results = document.getElementById("results");
-            for (let i in db) {
-                let ta = document.createTextNode(db[i].name);
-                let a = document.createElement("A");
-                a.setAttribute('href', '#allergy?'+db[i].id);
-                a.appendChild(ta);
-                let h2 = document.createElement("H2");
-                h2.appendChild(a);
-                let tp = document.createTextNode(db[i].description);
-                let p = document.createElement("P");
-                p.appendChild(tp);
-                let div = document.createElement("DIV");
-                div.appendChild(h2)
-                div.appendChild(p);
-                results.appendChild(div);
-            }
-            break;
-        case 'allergy.html':
-            let allergy = db.filter(a => a.id == parameter)[0];
-            let headerBox = document.getElementById("headerBox");
-            let tspan = document.createTextNode(allergy.name);
-            let span = document.createElement("SPAN");
-            span.appendChild(tspan);
-            span.setAttribute('class', 'highlight');
+    case 'main.html':
+        let first6 = db.slice(0,6);
+        let newsBox = document.getElementById("newsBox");
+        for (let i in first6) {
+            let ta = document.createTextNode(first6[i].name);
+            let a = document.createElement("A");
+            a.setAttribute('href', '#allergy?'+first6[i].id);
+            a.appendChild(ta);
             let h2 = document.createElement("H2");
-            h2.appendChild(span);
-            h2.setAttribute('class', 'boxLeft');
-            headerBox.appendChild(h2);
-            let th2 = document.createTextNode("Statistics");
-            h2 = document.createElement("H2");
-            h2.appendChild(th2);
-            h2.setAttribute('class', 'boxRight');
-            headerBox.appendChild(h2);
-            
-            let boxLeft = document.querySelector('#infoBox .boxLeft');
-            
-            let th3 = document.createTextNode("What is " + allergy.name + "?");
-            let h3 = document.createElement("H3");
-            h3.appendChild(th3);
-            let tp = document.createTextNode(db[parameter].description);
+            h2.appendChild(a);
+            let tp = document.createTextNode(first6[i].description);
             let p = document.createElement("P");
             p.appendChild(tp);
             let div = document.createElement("DIV");
-            div.appendChild(h3);
+            div.appendChild(h2)
             div.appendChild(p);
-            boxLeft.appendChild(div);
-            
-            th3 = document.createTextNode("Symptoms:");
-            h3 = document.createElement("H3");
-            h3.appendChild(th3);
-            tp = document.createTextNode(allergy.symptoms.join(', '));
-            p = document.createElement("P");
-            p.appendChild(tp);
-            div = document.createElement("DIV");
-            div.appendChild(h3);
-            div.appendChild(p);
-            boxLeft.appendChild(div);
-        
-            th3 = document.createTextNode("Prevention:");
-            h3 = document.createElement("H3");
-            h3.appendChild(th3);
-            tp = document.createTextNode(allergy.prevention);
-            p = document.createElement("P");
-            p.appendChild(tp);
-            div = document.createElement("DIV");
-            div.appendChild(h3);
-            div.appendChild(p);
-            boxLeft.appendChild(div);
-            
-            th3 = document.createTextNode("Treatment:");
-            h3 = document.createElement("H3");
-            h3.appendChild(th3);
-            tp = document.createTextNode(allergy.treatment);
-            p = document.createElement("P");
-            p.appendChild(tp);
-            div = document.createElement("DIV");
-            div.appendChild(h3);
-            div.appendChild(p);
-            boxLeft.appendChild(div);
-            
-            th3 = document.createTextNode("Medication:");
-            h3 = document.createElement("H3");
-            h3.appendChild(th3);
-            tp = document.createTextNode(allergy.medication.join(', '));
-            p = document.createElement("P");
-            p.appendChild(tp);
-            div = document.createElement("DIV");
-            div.appendChild(h3);
-            div.appendChild(p);
-            boxLeft.appendChild(div);
-            
-            break;
-        default:
+            newsBox.appendChild(div);
         }
+        break;
+    case 'results.html':
+        let results = document.getElementById("results");
+        let selection;
+        if (parameter == undefined || parameter == "") {
+            selection = db;
+        } else {
+            selection = db.filter(a => a.name.includes(parameter) || a.description.includes(parameter));
+        }
+        for (let i in selection) {
+            let ta = document.createTextNode(selection[i].name);
+            let a = document.createElement("A");
+            a.setAttribute('href', '#allergy?'+selection[i].id);
+            a.appendChild(ta);
+            let h2 = document.createElement("H2");
+            h2.appendChild(a);
+            let tp = document.createTextNode(selection[i].description);
+            let p = document.createElement("P");
+            p.appendChild(tp);
+            let div = document.createElement("DIV");
+            div.appendChild(h2)
+            div.appendChild(p);
+            results.appendChild(div);
+        }
+        break;
+    case 'allergy.html':
+        let allergy = db.filter(a => a.id == parameter)[0];
+        let headerBox = document.getElementById("headerBox");
+        let tspan = document.createTextNode(allergy.name);
+        let span = document.createElement("SPAN");
+        span.appendChild(tspan);
+        span.setAttribute('class', 'highlight');
+        let h2 = document.createElement("H2");
+        h2.appendChild(span);
+        h2.setAttribute('class', 'boxLeft');
+        headerBox.appendChild(h2);
+        let th2 = document.createTextNode("Statistics");
+        h2 = document.createElement("H2");
+        h2.appendChild(th2);
+        h2.setAttribute('class', 'boxRight');
+        headerBox.appendChild(h2);
+
+        let boxLeft = document.querySelector('#infoBox .boxLeft');
+
+        let th3 = document.createTextNode("What is " + allergy.name + "?");
+        let h3 = document.createElement("H3");
+        h3.appendChild(th3);
+        let tp = document.createTextNode(db[parameter].description);
+        let p = document.createElement("P");
+        p.appendChild(tp);
+        let div = document.createElement("DIV");
+        div.appendChild(h3);
+        div.appendChild(p);
+        boxLeft.appendChild(div);
+
+        th3 = document.createTextNode("Symptoms:");
+        h3 = document.createElement("H3");
+        h3.appendChild(th3);
+        tp = document.createTextNode(allergy.symptoms.join(', '));
+        p = document.createElement("P");
+        p.appendChild(tp);
+        div = document.createElement("DIV");
+        div.appendChild(h3);
+        div.appendChild(p);
+        boxLeft.appendChild(div);
+
+        th3 = document.createTextNode("Prevention:");
+        h3 = document.createElement("H3");
+        h3.appendChild(th3);
+        tp = document.createTextNode(allergy.prevention);
+        p = document.createElement("P");
+        p.appendChild(tp);
+        div = document.createElement("DIV");
+        div.appendChild(h3);
+        div.appendChild(p);
+        boxLeft.appendChild(div);
+
+        th3 = document.createTextNode("Treatment:");
+        h3 = document.createElement("H3");
+        h3.appendChild(th3);
+        tp = document.createTextNode(allergy.treatment);
+        p = document.createElement("P");
+        p.appendChild(tp);
+        div = document.createElement("DIV");
+        div.appendChild(h3);
+        div.appendChild(p);
+        boxLeft.appendChild(div);
+
+        th3 = document.createTextNode("Medication:");
+        h3 = document.createElement("H3");
+        h3.appendChild(th3);
+        tp = document.createTextNode(allergy.medication.join(', '));
+        p = document.createElement("P");
+        p.appendChild(tp);
+        div = document.createElement("DIV");
+        div.appendChild(h3);
+        div.appendChild(p);
+        boxLeft.appendChild(div);
+
+        break;
+    default:
+    }
 }
 
 function Router(routes) {
@@ -163,8 +169,11 @@ Router.prototype = {
         if (window.location.hash.length > 0) {
             for (i = 0, length = r.length; i < length; i += 1) {
                 route = r[i];
-                var parameter = window.location.hash.substr(1).split('?')[1];
                 if (route.isActiveRoute(window.location.hash.substr(1).split('?')[0])) {
+                    let parameter = window.location.hash.substr(1).split('?')[1];
+                    if (parameter == undefined) {
+                        parameter = window.document.activeElement.parentElement.firstElementChild.value;
+                    }
                     scope.goToRoute(route.htmlName, parameter);
                 }
             }
@@ -172,7 +181,7 @@ Router.prototype = {
             for (i = 0, length = r.length; i < length; i += 1) {
                 route = r[i];
                 if (route.defaultRoute) {
-                    scope.goToRoute(route.htmlName);
+                    scope.goToRoute(route.htmlName, undefined);
                 }
             }
         }
