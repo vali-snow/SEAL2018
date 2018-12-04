@@ -121,7 +121,56 @@
         </section>
         <section>
             <h2>Report <span class="highlight">A</span></h2>
-            <p>So close, yet so far away ...</p>
+            <section>
+                <h3>The Choice Between SPA and Browser Extension</h3>
+                <p>Our application will be of type SPA - Single Page Application.</p>
+                <p>That means we will load a single HTML page and dynamically update it as the user interacts with the App.</p>
+                <p>This approach allows the creation of a fluid and responsive App, without the constant page reloads.</p>
+                <p>However, this also has the drawback of a slower initial load.</p>
+            </section>
+            <section>
+                <h3>Modules </h3>
+                <p>We have structured our application in 4  main modules:</p>
+                <section>
+                    <h4><span class="highlight">&#9900;</span> app.js</h4>
+                    <p>This is for initializing the Web App, and setting things in motion for loading the default view.</p>
+                <section>
+                <section>
+                    <h4><span class="highlight">&#9900;</span> db.js</h4>
+                    <p>Due to the lack of a specific Web API, we will use a mocked database, in the form of a JSON file.</p>
+                <section>
+                <section>
+                    <h4><span class="highlight">&#9900;</span> router.js</h4>
+                    <p>This module is the core of our application. Its primary role is switching between our views. And added onto that, it generates the dynamic content of each specific view, based on the information retrieved from the mocked database.</p>
+                <section>
+                <section>
+                    <h4><span class="highlight">&#9900;</span> notification.js</h4>
+                    <p>Used to implement the notifications of the Web App.</p>
+                <section>
+                <p></p>
+            </section>
+            <section>
+                <h3>How It Works - An Eagle's Eye View</h3>
+                <p>Our SPA consists of one index.html, and 4 views: main.html, result.html, allergy.html and report.html.</p>
+                <p>The default view on which our web application starts is main.html. We set it as default in our app.js module.</p>
+                <p>Our app.js module creates an instance of router.js. Here, we add an eventListener which awaits page changes, as resulting from using the Web App by clicking on links.</p>
+                <p>Whenever a link is clicked, the event is triggered, and the div in index.html, the one with the <i>app</i> class, is changed with another div containing the the requested information, simulating a page-change without actually changing the page.</p>
+                <p>Now, if the page has a parameter, as for example if we request the allergy view, for <i>allergy</i> with id <i>4</i>, router.js uses the loadData method to fetch the information from our mockedDatabase, select the one with the proper id, dinamically generate part of the replacing div and replace it in index.html</p>
+            </section>
+            <section>
+                <h3>UML Diagram</h3>
+                <figure typeof="sa:image">
+                    <img src="./img/..." alt="UML Diagram">
+                    <figcaption> <i>Fig. 2:</i> UML Diagram</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>Use Case Diagram</h3>
+                <figure typeof="sa:image">
+                    <img src="./img/..." alt="Use Case Diagram">
+                    <figcaption> <i>Fig. 3:</i> Use Case Diagram</figcaption>
+                </figure>
+            </section>
         </section>
         <section>
             <h2>Report <span class="highlight">S</span></h2>
