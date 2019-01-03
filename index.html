@@ -10,18 +10,28 @@
 <body>
     <header>
         <h1 id="title" class="w80p"><span class="highlight">SEASONAL</span> ALLERGY WEB NOTIFIER</h1>
-        <button id="button_1" onclick="notifyMe()">Notify me!</button>
     </header>
     <div id="app"></div>
     <footer>
         <p>Seasonal Allergy, Copyright <span class="highlight">&copy;</span> 2018.</p>
     </footer>
+    
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <input type="checkbox" name="allergyType" value="Type1" checked> Type1<br>
+                <input type="checkbox" name="allergyType" value="Type2" checked> Type2<br>
+                <input type="checkbox" name="allergyType" value="Type3" checked> Type3<br>
+                <button id="notificationSave" type="button">Save</button>
+            </form>
+        </div>
+    </div>
+    
     <script src="js/route.js"></script>
     <script src="js/router.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/db.js"></script>
-    <script src="js/notification.js"></script>
-    
+    <script src="js/db.js"></script>    
 </body>
 
 </html>
