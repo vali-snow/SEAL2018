@@ -1,83 +1,91 @@
-[
-    {
-        "id":1,
-        "name":"allergy1",
-        "description":"...",
-        "symptoms": ["A1-S1", "A1-S2", "A1-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":2,
-        "name":"allergy2",
-        "description":"...",
-        "symptoms": ["A2-S2", "A2-S2", "A2-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":3,
-        "name":"allergy3",
-        "description":"...",
-        "symptoms": ["A3-S1", "A3-S2", "A3-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":4,
-        "name":"allergy4",
-        "description":"...",
-        "symptoms": ["A4-S1", "A4-S2", "A4-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":5,
-        "name":"allergy5",
-        "description":"...",
-        "symptoms": ["A5-S1", "A5-S2", "A5-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":6,
-        "name":"allergy6",
-        "description":"...",
-        "symptoms": ["A6-S1", "A6-S2", "A6-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":7,
-        "name":"allergy7",
-        "description":"...",
-        "symptoms": ["A7-S1", "A7-S2", "A7-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":8,
-        "name":"allergy8",
-        "description":"...",
-        "symptoms": ["A8-S1", "A8-S2", "A8-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    },
-    {
-        "id":9,
-        "name":"allergy9",
-        "description":"...",
-        "symptoms": ["A9-S1", "A9-S2", "A9-S3"],
-        "prevention": "...",
-        "treatment": "...",
-        "medication": ["Pill-1","Pill-2","pILL-3"]
-    }
+[{
+		"id": 1,
+		"type": "type1",
+		"name": "allergy1",
+		"description": "...",
+		"symptoms": ["A1-S1", "A1-S2", "A1-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 2,
+		"type": "type2",
+		"name": "allergy2",
+		"description": "...",
+		"symptoms": ["A2-S2", "A2-S2", "A2-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 3,
+		"type": "type3",
+		"name": "allergy3",
+		"description": "...",
+		"symptoms": ["A3-S1", "A3-S2", "A3-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 4,
+		"type": "type1",
+		"name": "allergy4",
+		"description": "...",
+		"symptoms": ["A4-S1", "A4-S2", "A4-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 5,
+		"type": "type2",
+		"name": "allergy5",
+		"description": "...",
+		"symptoms": ["A5-S1", "A5-S2", "A5-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 6,
+		"type": "type3",
+		"name": "allergy6",
+		"description": "...",
+		"symptoms": ["A6-S1", "A6-S2", "A6-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 7,
+		"type": "type1",
+		"name": "allergy7",
+		"description": "...",
+		"symptoms": ["A7-S1", "A7-S2", "A7-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 8,
+		"type": "type2",
+		"name": "allergy8",
+		"description": "...",
+		"symptoms": ["A8-S1", "A8-S2", "A8-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	},
+	{
+		"id": 9,
+		"type": "type3",
+		"name": "allergy9",
+		"description": "...",
+		"symptoms": ["A9-S1", "A9-S2", "A9-S3"],
+		"prevention": "...",
+		"treatment": "...",
+		"medication": ["Pill-1", "Pill-2", "pILL-3"]
+	}
 ]

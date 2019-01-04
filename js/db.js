@@ -17,7 +17,7 @@ function readTextFile(file, callback) {
 function storeBDinSS() {
     "use strict";
     readTextFile("/db/db.json", function (text) {
-        sessionStorage.db = text;
+        sessionStorage.db = JSON.stringify(text);
     });
 }
 
