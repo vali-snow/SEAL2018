@@ -3,14 +3,25 @@
 
 (function () {
     'use strict';
-    function initNotification(){
-        var data = {
-            title: 'Test notification',
-            msg: 'Hello world reloaded',
-            msger: 'The one and only',
-            link: 'https://www.google.ro/'
+    
+    function initServiceWorker() {
+        if ('serviceWorker' in navigator && 'PushManager' in window) {
+            console.log('Service Worker and Push is supported');
+
+            navigator.serviceWorker.register('sw.js').then(function(swReg) {
+                console.log('Service Worker is registered', swReg);
+                ServiceWorker = swReg;
+            }).catch(function(error) {
+                console.error('Service Worker Error', error);
+            });
+        } else {
+            console.warn('Push messaging is not supported');
+            pushButton.textContent = 'Push Not Supported';
         }
-        
+    }
+    initServiceWorker();
+    
+    function initNotification(){
         var modal = document.getElementById('notificationModal');
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function() {
@@ -23,26 +34,22 @@
                 type2: modal.getElementsByTagName("input")[1].checked,
                 type3: modal.getElementsByTagName("input")[2].checked
             };
-            localStorage.setItem("notificationTypes", JSON.stringify(notificationTypes));
+            localStorage.setItem('notificationTypes',JSON.stringify(notificationTypes));
+            navigator.serviceWorker.controller.postMessage(notificationTypes);
             modal.style.display = "none";
         }
         
         if (Notification.permission !== 'denied') {
             Notification.requestPermission(function (permission) {
-                if (permission==='granted' && localStorage.getItem('notificationTypes') === null){
-                    modal.style.display = "block";
-                    
-//                    var notification = new Notification(data.title, {
-//                        body: data.msg+ "\n" + data.msger,
-//                        icon: "/img/notify.png",
-//                        timeout: 3000
-//                    });
-//                    notification.onclick = function(event){
-//                        event.preventDefault();
-//                        window.open(data.link, '_blank');
-//                    }
+                if (permission==='granted'){
+                    if (localStorage.getItem('notificationTypes') === null) {
+                       modal.style.display = "block";
+                    } else {
+                        var notificationTypes = JSON.parse(localStorage.getItem('notificationTypes'));
+                        navigator.serviceWorker.controller.postMessage(notificationTypes);
+                    }
                 }
-                localStorage.removeItem('notificationTypes');
+                //localStorage.removeItem('notifications');
             });
         }        
     }
