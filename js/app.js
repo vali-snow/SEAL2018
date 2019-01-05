@@ -1,8 +1,15 @@
-/*global Route, Router*/
+/*global Route, Router, storeBDinSS*/
 
 
-(function () {
+function inits() {
     'use strict';
+    function initSessionStorage() {
+        if (!sessionStorage.db) {
+            storeBDinSS();
+        }
+    }
+    initSessionStorage();
+    
     
     function initServiceWorker() {
         if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -64,4 +71,5 @@
         ]);
     }
     initRouter();
-}());
+};
+inits();

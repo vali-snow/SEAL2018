@@ -4,9 +4,6 @@
 
 function loadData(htmlName, parameter) {
     'use strict';
-    if (!sessionStorage.db) {
-        storeBDinSS();
-    }
     var db = restoreDBfromSSasJSON();
     
     switch (htmlName) {
