@@ -1,5 +1,6 @@
 [{   
 	"id": 1,
+	"type": "Respiratory Allergies",
 	"name": "Pollen Allergy",
 	"description": "As plants release pollen, millions of people start having hay fever. Trees, grasses, and weeds release these tiny grains into the air to fertilize other plants. When they get into the nose of someone who’s allergic, they send the body's defenses haywire. The immune system mistakenly sees the pollen as a danger and releases antibodies that attack the allergens.",
 	"symptoms": ["runny nose", "sneezing", "watery eyes","coughing","dark circles under the eyes"],
@@ -13,6 +14,7 @@
 },
 {
 	"id": 2,
+	"type": "Respiratory Allergies",
 	"name": "Dust mites Allergy",
 	"description": "When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.",
 	"symptoms": ["runny nose", "sneezing", "watery eyes","coughing","dark circles under the eyes"],
@@ -26,6 +28,7 @@
 },
 {
 	"id": 3,
+	"type": "Respiratory Allergies",
 	"name": "Mold Allergy",
 	"description": "When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.",
 	"symptoms": ["runny nose", "sneezing", "watery eyes","coughing","dark circles under the eyes"],
@@ -39,6 +42,7 @@
 },
 {
 	"id": 4,
+	"type": "Respiratory Allergies",
 	"name": "Animals Allergy",
 	"description": "Most people are not allergic to animal fur, but rather to a protein found in the pet dander, saliva, and urine.",
 	"symptoms": ["runny nose", "sneezing", "watery eyes","coughing","dark circles under the eyes"],
@@ -52,6 +56,7 @@
 },
 {
 	"id": 5,
+	"type": "Food Allergies",
 	"name": "Milk Allergy",
 	"description": "A milk allergy is when your immune system thinks dairy is a foreign invader and attacks it by releasing chemicals called histamines.",
 	"symptoms": ["wheezing", "vomiting", "diarrhea","irritability"],
@@ -65,6 +70,7 @@
 },
 {
 	"id": 6,
+	"type": "Food Allergies",
 	"name": "Eggs Allergy",
 	"description": "Egg allergy is an exaggerated reaction of the immune system to egg consumption and is one of the most common forms of allergy at children. Egg allergy occurs from early childhood and disappears to a large extent of children at adolescence.",
 	"symptoms": ["urticaria", "vomiting", "itching", "nasal congestion", "cramping"],
@@ -78,6 +84,7 @@
 },
 {
 	"id": 7,
+	"type": "Food Allergies",
 	"name": "Nuts Allergy",
 	"description": "Peanut allergy is an exaggerated reaction of the immune system to the consumption of peanuts and foods containing peanuts.",
 	"symptoms": ["hives", "itching", "rash"],
@@ -91,6 +98,7 @@
 },
 {
 	"id": 8,
+	"type": "Weather Allergies",
 	"name": "Sun Allergy",
 	"description": "Solar Allergy is a term used to describe a number of diseases characterized by the appearance of a pruritic eruption as a result of exposure to the sun. The most common form of sun allergy is polymorphic rash or summer prurigo, which usually occurs with the first exposure to the sun in the year and in many cases improves in the summer, once the skin is used to higher levels of UV radiation.",
 	"symptoms": ["redness", "rash", "pruritus"],
@@ -104,6 +112,7 @@
 },
 {
 	"id": 9,
+	"type": "Food Allergies",
 	"name": "Soy Allergy",
 	"description": "Soy allergy is an exaggerated reaction of the immune system to soy consumption and foods containing soy. Usually, the reaction occurs as a result of the consumption of soy milk in childhood.",
 	"symptoms": ["rash", "hives", "pruritus around the mouth","sneezing","cramps","vomiting"],

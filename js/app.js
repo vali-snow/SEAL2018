@@ -37,9 +37,9 @@ function inits() {
         var button = document.getElementById('notificationSave');
         button.onclick = function(){
             var notificationTypes = {
-                type1: modal.getElementsByTagName("input")[0].checked,
-                type2: modal.getElementsByTagName("input")[1].checked,
-                type3: modal.getElementsByTagName("input")[2].checked
+                WeatherAllergies: modal.getElementsByTagName("input")[0].checked,
+                RespiratoryAllergies: modal.getElementsByTagName("input")[1].checked,
+                FoodAllergies: modal.getElementsByTagName("input")[2].checked
             };
             localStorage.setItem('notificationTypes',JSON.stringify(notificationTypes));
             navigator.serviceWorker.controller.postMessage(notificationTypes);
