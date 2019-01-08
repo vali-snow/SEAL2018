@@ -48,3 +48,13 @@
     background: #d3d3d3;
     flex:1;
 }
+
+.share{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.share:hover{
+    color:#4169e1;
+}
+
