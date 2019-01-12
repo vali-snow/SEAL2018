@@ -8,7 +8,7 @@ function loadData(htmlName, parameter) {
     
     switch (htmlName) {
     case 'main.html':
-        let first6 = db.slice(0,6);
+        let first6 = db.slice(0,8);
         let newsBox = document.getElementById("newsBox");
         for (let i in first6) {
             let ta = document.createTextNode(first6[i].name);
@@ -66,6 +66,66 @@ function loadData(htmlName, parameter) {
         h2.appendChild(th2);
         h2.setAttribute('class', 'boxRight');
         headerBox.appendChild(h2);
+        let graphValues = allergy.statistics['affected'];
+        let canvas = document.getElementById("barChart");
+        let ctx = canvas.getContext('2d');
+        let width = 80;
+        let X = 130;
+        let years = allergy.statistics['years'];
+        
+        ctx.beginPath();
+        ctx.strokeStyle = "#000";
+        ctx.moveTo(20,355);
+        ctx.lineTo(500, 355);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.strokeStyle = "#000";
+        ctx.moveTo(80,35);
+        ctx.lineTo(80, 390);
+        ctx.stroke();
+        for (var i = 0; i < graphValues.length; i++){
+            var h = graphValues[i];
+            if(h < 100){
+//                ctx.fillStyle = "#e8491d";
+//                ctx.fillRect(X,canvas.height - h - 65, width, h+10);
+                var grd = ctx.createLinearGradient(0, 0, 0, 540);
+                grd.addColorStop(0, "#006d0c");
+                grd.addColorStop(1, "#edffef");
+                ctx.fillStyle = grd;
+                ctx.fillRect(X,canvas.height - h - 65, width, h+10);
+            }
+            else if(h >= 100 && h< 200){
+//                ctx.fillStyle = "#e8491d";
+//                ctx.fillRect(X,canvas.height - h - 65, width, h+10);
+                var grd = ctx.createLinearGradient(0, 0, 0, 540);
+                grd.addColorStop(0, "orange");
+                grd.addColorStop(1, "lightyellow");
+                ctx.fillStyle = grd;
+                ctx.fillRect(X,canvas.height - h - 65, width, h+10);
+            }
+            else {
+//                ctx.fillStyle = "#e8491d";
+//                ctx.fillRect(X,canvas.height - h - 65, width, h+10);
+                var grd = ctx.createLinearGradient(0, 0, 0, 540);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(1, "darkorange");
+                ctx.fillStyle = grd;
+                ctx.fillRect(X,canvas.height - h - 65, width, h+10);
+            }
+            
+            
+            ctx.font = "italic 18px fantasy";
+            ctx.fillStyle = "#000";
+            ctx.fillText(graphValues[i], X+22, canvas.height - h - 67);
+            ctx.font = "italic 25px monospace";
+            ctx.fillText(years[i], X + 14, canvas.height -22);
+            ctx.font = "italic 20px Times New Roman";
+            ctx.fillText("Years", 510, canvas.height - 42);
+            ctx.font = "italic 20px Times New Roman";
+            ctx.fillText("Affected", 45, 25);
+            X += width + 15;
+
+            }
 
         let boxLeft = document.querySelector('#infoBox .boxLeft');
 

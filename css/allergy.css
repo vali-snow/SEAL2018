@@ -35,7 +35,7 @@
 }
 
 .boxLeft > div {
-    background: #d3d3d3;
+    background: #d3d3d3;s
     margin-bottom: 1%;
     padding: 1%;
 }
@@ -47,4 +47,16 @@
 .boxRight > div {
     background: #d3d3d3;
     flex:1;
+}
+
+#barChart {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+    top: 100px;
 }
