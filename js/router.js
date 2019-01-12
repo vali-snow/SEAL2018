@@ -8,7 +8,7 @@ function loadData(htmlName, parameter) {
     
     switch (htmlName) {
     case 'main.html':
-        let first6 = db.slice(0,8);
+        let first6 = db.slice(0,6);
         let newsBox = document.getElementById("newsBox");
         for (let i in first6) {
             let ta = document.createTextNode(first6[i].name);
