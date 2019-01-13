@@ -37,7 +37,7 @@
 .boxLeft > div {
     background: #d3d3d3;
     margin-bottom: 1%;
-    padding: 1%;
+    padding: 3%;
 }
 
 .boxLeft > div:last-of-type {
@@ -47,10 +47,20 @@
 .boxRight > div {
     background: #d3d3d3;
     flex:1;
+    padding: 3%;
+}
+
+.share{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.share:hover{
+    color:#4169e1;
 }
 
 #barChart {
-    margin-left: 50px;
+/*    margin-left: 50px;*/
     margin-top: 50px;
 }
 h2 {
