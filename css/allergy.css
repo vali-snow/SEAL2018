@@ -59,3 +59,14 @@
     color:#4169e1;
 }
 
+#barChart {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+    top: 100px;
+}
