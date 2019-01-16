@@ -67,7 +67,8 @@ function inits() {
             new Route('main', 'main.html', true),
             new Route('results', 'results.html'),
             new Route('allergy', 'allergy.html'),
-            new Route('report', 'report.html')
+            new Route('report', 'report.html'),
+            new Route('guide', 'guide.html')
         ]);
     }
     initRouter();

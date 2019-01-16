@@ -17,7 +17,7 @@ figure img {
     border: thin dashed #35424a;
 }
 
-figure img, figure figcaption{
+video, figure img, figure figcaption{
     max-width: 80%;
     height: auto;
     display: block;
