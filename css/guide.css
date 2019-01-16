@@ -1,5 +1,4 @@
-h1:not(#title),
-h2,h3,h4 {
+h1,h2,h3,h4 {
     text-indent: 1%; 
     background-color: #35424a;
     color: #ffffff;
@@ -7,9 +6,6 @@ h2,h3,h4 {
 
 article > h1 {
     font-size: 200%;
-}
-
-article > h1, section > h2 {
     border-bottom: #e8491d 3px solid;
 }
 
@@ -17,7 +13,7 @@ figure img {
     border: thin dashed #35424a;
 }
 
-figure img, figure figcaption{
+video, figure img, figure figcaption{
     max-width: 80%;
     height: auto;
     display: block;
