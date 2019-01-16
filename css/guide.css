@@ -1,0 +1,22 @@
+h1,h2,h3,h4 {
+    text-indent: 1%; 
+    background-color: #35424a;
+    color: #ffffff;
+}
+
+article > h1 {
+    font-size: 200%;
+    border-bottom: #e8491d 3px solid;
+}
+
+figure img {
+    border: thin dashed #35424a;
+}
+
+video, figure img, figure figcaption{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
