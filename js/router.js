@@ -2,6 +2,12 @@
 /*eslint no-console: ["error", { allow: ["warn", "error"] }]*/
 /*eslint-env es6*/
 
+function redirectToSearch(){
+    'use strict';
+    document.getElementById("searchform").action = "#results?"+document.getElementById("searchform").getElementsByTagName("input")[0].value;
+    document.getElementById("searchform").submit();
+}
+
 function loadData(htmlName, parameter) {
     'use strict';
     var db = restoreDBfromSSasJSON();
@@ -27,6 +33,7 @@ function loadData(htmlName, parameter) {
         }
         break;
     case 'results.html':
+        history.pushState("","","index.html#results");
         let results = document.getElementById("results");
         let selection;
         if (parameter == undefined || parameter == "") {
@@ -227,9 +234,9 @@ Router.prototype = {
             for (i = 0, length = r.length; i < length; i += 1) {
                 route = r[i];
                 if (route.isActiveRoute(window.location.hash.substr(1).split('?')[0])) {
-                    let parameter = window.location.hash.substr(1).split('?')[1];
+                    let parameter = window.document.activeElement.parentElement.firstElementChild.value;
                     if (parameter == undefined) {
-                        parameter = window.document.activeElement.parentElement.firstElementChild.value;
+                        parameter = window.location.hash.substr(1).split('?')[1];
                     }
                     scope.goToRoute(route.htmlName, parameter);
                 }
