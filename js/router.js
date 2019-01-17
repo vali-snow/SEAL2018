@@ -139,7 +139,7 @@ function loadData(htmlName, parameter) {
         let th3 = document.createTextNode("What is " + allergy.name + "?");
         let h3 = document.createElement("H3");
         h3.appendChild(th3);
-        let tp = document.createTextNode(db[parameter].description);
+        let tp = document.createTextNode(allergy.description);
         let p = document.createElement("P");
         p.appendChild(tp);
         let div = document.createElement("DIV");
